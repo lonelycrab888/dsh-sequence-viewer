@@ -1,0 +1,54 @@
+{
+  "name": "dsh-sequence-viewer",
+  "version": "0.2.6",
+  "description": "Biological sequence and multiple-alignment workbench for DeepSeek Harness.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.cjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src/index.js",
+    "src/engine.js",
+    "src/model-tools.js",
+    "src/workbench-contract.js",
+    "skills/sequence-viewer/SKILL.md",
+    "lib/client.cjs",
+    "lib/sequence-viewer",
+    "vendor/sequence-viewer/*.md",
+    "vendor/sequence-viewer/LICENSE",
+    "vendor/sequence-viewer/starter-examples.json",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-sidebar-documentpreview",
+        "@deepseek-ai/dsh-client-ui-sidebar-right",
+        "@deepseek-ai/dsh-client-ui-chat"
+      ]
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.2-rc.2"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "prepack": "npm run build",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
