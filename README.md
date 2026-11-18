@@ -21,7 +21,7 @@ DSH Sequence Viewer 是 DeepSeek Harness（DSH）中的生物序列工作台。�
 ## 安装
 
 ```sh
-dsh plugin --profile web add /absolute/path/dsh-sequence-viewer-0.2.6.tgz
+dsh plugin --profile web add dsh-sequence-viewer
 dsh web
 ```
 

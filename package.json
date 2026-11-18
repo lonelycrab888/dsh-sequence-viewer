@@ -1,7 +1,11 @@
 {
   "name": "dsh-sequence-viewer",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "description": "Biological sequence and multiple-alignment workbench for DeepSeek Harness.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lonelycrab888/dsh-sequence-viewer.git"
+  },
   "type": "module",
   "main": "./src/index.js",
   "exports": {
